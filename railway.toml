@@ -8,3 +8,18 @@ healthcheckPath = "/health"
 healthcheckTimeout = 30
 restartPolicyType = "on_failure"
 restartPolicyMaxRetries = 3
+
+# ---------------------------------------------------------------------------
+# Required environment variables
+# Set these in the Railway dashboard under your service → Variables
+# ---------------------------------------------------------------------------
+# RADARR_URL      = "http://your-radarr-host:7878"   (required)
+# RADARR_API_KEY  = "your_api_key"                   (required)
+#
+# Optional / defaults provided:
+# TRANSPORT       = "http"    (use "stdio" for Claude Desktop local mode)
+# PORT            = "3000"    (Railway overrides this automatically)
+
+[deploy.envVars]
+TRANSPORT = "http"
+PORT = "3000"
